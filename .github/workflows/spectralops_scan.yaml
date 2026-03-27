@@ -17,6 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Use SpectralOps Scanner action
-        uses: perimeter-81/actions/actions/security/spectralops@main
+        uses: perimeter-81/actions/actions/security/spectralops@main # zizmor: ignore[unpinned-uses]
         with:
           spectral-args: "scan --ok --engines oss,secrets,iac --asset-mapping 'p81-core'"
