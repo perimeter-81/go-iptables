@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   spectralops_scan:
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.ACTIONS_RUNNER }}
     steps:
       - name: Use SpectralOps Scanner action
         uses: perimeter-81/actions/actions/security/spectralops@v1 # zizmor: ignore[unpinned-uses]

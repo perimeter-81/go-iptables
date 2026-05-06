@@ -21,7 +21,7 @@ jobs:
     strategy:
       matrix:
         go-version: [1.16.x, 1.17.x, 1.18.x, 1.19.x, 1.20.x]
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.ACTIONS_RUNNER }}
     steps:
     - name: Set up Go 1.x
       uses: actions/setup-go@7b8cf10d4e4a01d4992d18a89f4d7dc5a3e6d6f4 # v4
