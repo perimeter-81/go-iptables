@@ -9,6 +9,7 @@ on:
     branches: [main]
 permissions:
   contents: read
+  actions: read
 
 # don't waste job slots on superseded code
 concurrency:
