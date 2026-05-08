@@ -20,3 +20,11 @@ jobs:
         uses: perimeter-81/actions/actions/security/spectralops@v1 # zizmor: ignore[unpinned-uses]
         with:
           spectral-args: "scan --ok --engines oss,secrets,iac --asset-mapping 'p81-core'"
+
+      - name: Push metrics
+        if: always()
+        continue-on-error: true
+        uses: perimeter-81/actions/actions/monitoring/push_metrics@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
